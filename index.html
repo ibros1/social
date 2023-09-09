@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" id="bp-nouveau-bb-icons-css" href="https://www.buddyboss.com/resources/wp-content/plugins/buddyboss-platform/bp-templates/bp-nouveau/icons/css/bb-icons.min.css?ver=1.0.3" type="text/css" media="screen">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+  li {
+    list-style: none;
+  }
+
+  /* Default light mode styles */
+  body {
+    background-color: white;
+  }
+
+  .navbar, .sidebar, .main-content, h1, h3, .sidebar-name {
+    color: black;
+  }
+
+  .navbar, .sidebar, .main-content {
+    background-color: white;
+  }
+
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #091025;
+  }
+
+  body.dark-mode .navbar, body.dark-mode .sidebar, body.dark-mode .main-content {
+    background-color: #080D1E;
+  }
+
+  body.dark-mode .navbar, body.dark-mode .sidebar, body.dark-mode .main-content, body.dark-mode h1, body.dark-mode h3, body.dark-mode .sidebar-name body.dark-mode #bb {
+    color: white;
+  }
+
+  /* Specific styles for sidebar icons in dark mode */
+  body.dark-mode .sidebar-name, body.dark-mode .sidebar-name span body.dark-mode #bb {
+    color: white;
+  }
+
+  /* Additional styles for sidebar icons inside side container in dark mode */
+  body.dark-mode .side .sidebar-name, body.dark-mode .side .sidebar-name span body.dark-mode #bb {
+    color: white;
+  }
+</style>
+<body>
+  <nav class="navbar">
+  
+    <div class="navbar__bars bb-icon-bars" id="bars" ><i></i></div>
+    <!-- <div class="mobilelogo ">
+      <img src="./styles/images/real logo Surmad.png" href="/">
+    </div> -->
+    <div class="navbar__menu">
+      <a data-tooltip="Home"> <i class="-home -f"></i><h1>Home</h1></a>
+      <a data-tooltip="Courses"> <i class="-graduation-cap -i"></i><h1>Courses</h1></a>
+      <a data-tooltip="Members"> <i class="-users"></i><h1>Members</h1></a>
+      <a data-tooltip="Contact"> <i class="-phone-call -i"></i><h1>Contact</h1></a>
+      <div class=" features flex ">
+        <div class="navfeatures">
+         
+          <li data-tooltip=""> <i 
+            class="bb-icon-search"></i></li>
+        </div>
+       
+        <div class="navfeatures">
+          <li data-tooltip="" id="sunIcon" onclick="toggleDarkMode()"> <i class="bb-icon-sun"></i></li>
+          <li data-tooltip="" id="moonIcon" class="hidden" onclick="toggleDarkMode()"> <i class="bb-icon-moon"></i></li>
+        </div>
+        <div class="navfeatures">
+          <li data-tooltip=""> <i class="bb-icon-shopping-cart"></i></li>
+        </div>
+        <div class="navfeatures">
+          <li data-tooltip=""> <i class="bb-icon-bell"></i></li>
+        </div>
+        <div class="navfeatures">
+          <li data-tooltip=""> <i class="bb-icon-inbox"></i></li>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="profile">
+      <h3>إبراهيم محمد أحمد</h3>
+      <img src="./styles/images/profile.jpg">
+    </div>
+  </nav>
+  <div class="container">
+    <div class="sidebar" onclick="(closeIocn)" id="sidebar">
+      <div class="logo flex justify-between">
+        <img src="./styles/images/real logo Surmad.png" href="/">
+        <div class="close mt-[10px] text-[33px]" >
+        <i class="bb-icon-times cursor-pointer hidden " id="close" ></i></div>
+      </div>
+   
+      <div class="sideprofile">
+        <img src="/styles/images/profile.jpg">
+        <div class="desc">
+          <div class="verfied">
+            <h3> Eng Cypher</h3> <img src="./styles/images/verified.png" data-tooltip="Verfied">
+          </div>
+          <div></div>
+          <p>@ibro</p>
+        </div>
+      </div>
+      <hr>
+      <div class="side container flex flex-col mt-[0px] ml-[10px] mr-[10px] text-black overflow-y-auto mt-[30px]">
+        <a href="#"> <li id="showIcon" class="bg-[#FFD700] rounded-md py-2 px-2 mr-4 cursor-pointer"> <i class="_mi _before bb-icon-f buddyboss bb-icon-home text-white w-5 h-5 text-[28px]" aria-hidden="true" id="bb"></i><span class="text-white font-semibold sidebar-name">Home</span></li></a>
+        <a href="#"> <li id="showIcon" class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 "><i class="_mi _before bb-icon-l buddyboss bb-icon-user w-5 h-5 text-[28px]" aria-hidden="true" id="bb"></i><span class="sidebar-name">My Profile</span></li></a>
+        <a href="#"> <li id="showIcon" class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 "><i class="_mi _before bb-icon-l buddyboss bb-icon-graduation-cap w-5 h-5 text-[28px]" aria-hidden="true" id="bb"></i><span class="sidebar-name">My Courses</span></li></a>
+        <a href="#"> <li id="showIcon" class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 "><i class="_mi _before bb-icon-l buddyboss bb-icon-certificate w-5 h-5 text-[28px]" aria-hidden="true" id="bb"></i><span class="sidebar-name">My Certificates</span></li></a>
+        <a href="#"> <li id="showIcon" class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 "><i class="_mi _before bb-icon-l buddyboss bb-icon-certificate w-5 h-5 text-[28px]" aria-hidden="true" id="bb"></i><span class="sidebar-name">Diploma</span></li></a>
+        <h3 class="text-left ml-[10px] font-semibold text-[#7F7F7F] mt-4 sidebar-heading "> <span class="sidebar-text">SETTINGS</span> </h3>
+        <a href="#"> <li id="showIcon" class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 "><i class="_mi _before bb-icon-l buddyboss bb-icon-cog w-5 h-5 text-[28px]" aria-hidden="true" id="bb"></i><span class="sidebar-name">Account</span></li></a>
+        <a href="#"> <li id="showIcon" class="hover:bg-[#F2F4F5] rounded-md py-2 px-2 mr-4 "><i class="_mi _before bb-icon-l buddyboss bb-icon-sign-out w-5 h-5 text-[28px]" aria-hidden="true" id="bb"></i><span class="sidebar-name">Log out</span></li></a>
+      </div>
+    </div>
+  </div>
+    <div class="main-content"> 
+      <div class="hero">
+    <img src="./styles/images/istockphoto-962448746-612x612-removebg.png">
+    <div class="herodesc">
+       <h3>Welcome to surmad</h3>
+       <p> you can get products,courses,and services Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolores, </p>
+       <a href="#">All Courses</a>
+    </div>
+      </div> 
+    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+      <div class="products">
+      <h2>Our Services</h2>
+    <div class="container1">
+      <div class="colomn">
+       <div class="rows">
+       
+        <img src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FA90ijraxStiEoemCcNUn&w=640&q=75">
+     <h3>All-Access Subscription</h3>
+     <p>Become the best coder you can be with<br> unlimited access to all the existing and future <br> courses </p>
+     <h4 style="color: #4C5DB1;"> Learn Now $29/m</h4>
+    </div>
+    <div class="rows">
+      <img src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fcdn.filestackcontent.com%2FlkYCN9UvRNFaLzywghPu&w=640&q=75">
+    <h3>The Ultimate C++ Series</h3>
+    <p>Master Modern C++: Go from Novice to <br>Professional. Everything you need to code in C++ in one bundle! </p>
+    <h4 style="color: #df7a15;">Learn Now $10</h4>
+    </div>
+    <div class="rows">
+      <img src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F4JkBtVU9QUwcwFCWi3AV&w=640&q=75">
+    <h3>The Ultimate JavaScript Series</h3>
+    <p>Master JavaScript: Go from Novice to Professional.Everything you need to code in JavaScript in one bundle! </p>
+    <h4 style="color: #494F52">Learn Now $10</h4>
+    </div>
+    </div>
+      </div>
+   
+      <div class="container1">
+        <div class="colomn">
+         <div class="rows">
+         
+          <img src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FBFMMlbcQvml9HSqXcvNp&w=640&q=75">
+       <h3>Complete Python Mastery</h3>
+       <p>Everything you need to program in Python in one course (includes 3 real-world projects) </p>
+       <h4 style="color: #6b4547;"> Learn Now $10</h4>
+      </div>
+      <div class="rows">
+        <img src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2FINZsH6XtRIqQqxvYGP6Q&w=640&q=75">
+      <h3>The Ultimate HTML5 & CSS3 Series</h3>
+      <p>Everything you need to build fast and stunning websites with HTML5 and CSS3 in one bundle
+      </p>
+      <h4 style="color: #188b4f;">Learn Now $10</h4>
+      </div>
+      <div class="rows">
+        <img src="https://codewithmosh.com/_next/image?url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2Ft12BZqmRoulvCTDhoYie&w=640&q=75">
+      <h3>The Ultimate Java Mastery Series</h3>
+      <p>Master Java - the most popular programming language underpinning most apps and websites </p>
+      <h4 style="color: #d9181e">Learn Now $10</h4>
+      </div>
+      </div>
+        </div>
+      </div>
+    </body>
+    </html>
+</body>
+
+<!-- ... (previous code) ... -->
+
+<script>
+  let isDarkMode = false;
+
+  function toggleDarkMode() {
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const body = document.body;
+
+    isDarkMode = !isDarkMode;
+
+    if (isDarkMode) {
+      // Switch to dark mode
+      sunIcon.classList.add('hidden');
+      moonIcon.classList.remove('hidden');
+      body.classList.add('dark-mode');
+    } else {
+      // Revert to light mode
+      sunIcon.classList.remove('hidden');
+      moonIcon.classList.add('hidden');
+      body.classList.remove('dark-mode');
+    }
+  }
+  document.getElementById('close').addEventListener('click', closeIcon);
+
+  function closeIcon() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = "none";
+}
+
+  
+</script>
+<script>
+  let sidebarOpen = false;
+
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const barsIcon = document.getElementById('bars');
+
+    if (!sidebarOpen) {
+      // Show the sidebar
+      sidebar.style.width = '20%'; // Adjust the width as needed
+      sidebarOpen = true;
+    } else {
+      // Hide the sidebar
+      sidebar.style.width = '0';
+      sidebarOpen = false;
+    }
+  }
+
+  // Add an event listener to the bars icon to toggle the sidebar
+  document.getElementById('bars').addEventListener('click', toggleSidebar);
+</script>
+
+</html>
+
+
+</html>

@@ -1,0 +1,374 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Plus+Jakarta+Sans:wght@600&display=swap');
+
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+body{
+  font-family: 'Inter', sans-serif;
+}
+.navbar {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+ 
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.06);
+ mb
+
+   .bars {
+    visibility: hidden;
+  }
+
+  & .navbar__menu {
+    margin-left: 160px;
+    margin-top: 16px;
+    display: flex;
+  }
+
+  & a {
+    padding: 5px;
+    font-size: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: black !important;
+    position: relative;
+    z-index: 50;
+    display: flex;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  & a h1 {
+    font-size: 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+
+  & a:hover {
+    padding: 5px;
+    background-color: $light; 
+     border-radius: 8px;
+    color: white;
+  }
+  
+  & .profile {
+    display: flex;
+    background-color: gold;
+    border-radius: 20px;
+    padding: 2px 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+
+  & .profile:hover {
+    border: 2px solid rgb(117, 237, 5);
+    border-radius: 20px;
+  }
+
+  & .profile img {
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  & .profile img:hover {
+    border: 2px solid rgb(191, 17, 17);
+    border-radius: 20px;
+  }
+
+  & .profile h3 {
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+.features{
+  display: flex;
+  margin-left: 50px;
+  padding: 5px;
+}
+.fetures li{
+font-size: 30px;
+margin-top: -05px;
+ padding: 2px 6px;
+ cursor: pointer;
+
+}
+.navfeatures li i{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.navfeatures {
+font-size: 30px;
+margin-top: -10px;
+cursor: pointer;
+}
+.navfeatures:hover li {
+   background-color: $light; 
+    border-radius: 8px;
+  background-color: rgb(255, 219, 14);
+
+  color: white;
+}
+.container {
+  display: flex;
+  z-index: 50;
+}
+
+.sidebar {
+  background-color: white;
+  box-shadow: 0px 4px 600px -1px rgba(0, 0, 0, 0.1), 0px 2px 400px -1px rgba(0, 0, 0, 0.06);
+  width: 20%;
+  z-index: 10;
+  visibility: visible;
+  overflow-y: auto;
+  height: calc(100vh - 0px) ; /* Adjust the height as needed */
+  position: fixed;
+ 
+  overflow-x: hidden;
+  img {
+    width: 180px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .logo {
+    border-bottom: 1px solid rgb(229, 229, 229) !important;
+  }
+
+  .main-content {
+    flex: 1;
+    margin-left: 20%;
+    padding: 20px;
+  }
+}
+
+.sideprofile {
+  display: flex;
+  margin-left: -10px;
+
+
+}
+.mobilelogo{
+  visibility: hidden;
+  width: 10px;
+ }
+
+hr{
+  border: 1px solid rgb(229, 229, 229); 
+
+ 
+}
+
+.sideprofile img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 200px;
+}
+// #close{
+//   visibility: hidden;
+// }
+.desc {
+  margin-top: 23px;
+  margin-left: 10px;
+
+  h3 {
+    cursor: pointer;
+    font-family: sans-serif;
+  }
+
+  p {
+    color: rgb(165, 165, 165);
+    margin-top: -12px;
+  }
+}
+
+.verfied {
+  display: flex;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-top: -0px;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+  }
+}
+
+.verfied img::before {
+  content: attr(data-tooltip); /* Displayed text */
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.663);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.2s;
+  pointer-events: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.verfied img:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.main-content{
+  margin-left: 200px;
+}
+.hero{
+background-color: rgb(59, 59, 201);
+width: 100%;
+height: 700px;
+display: flex;
+}
+.hero img{
+width: 400px;
+height: 600px;
+margin-left: 150px;
+padding-top: 100px;
+}
+.herodesc{
+  margin-top: 300px;
+  text-align: center;
+ 
+}
+.herodesc h3{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+.herodesc p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.herodesc a{
+  background-color:black ;
+  padding-top: 20px;
+  padding: 20px 100px;
+  color: white;
+  font-size: 20px;
+}
+.products{
+  background-color: #DBEAFF;
+  margin-top: -100px;
+  height: 1200px;
+}
+.container1{
+ text-align: center;
+ display: flex;
+ margin-left: 210px;
+ margin-bottom: 40px;
+ 
+ }
+
+ .products h2{
+  font-size: 40px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  text-align: center;
+  margin-left: 200px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ .rows h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+ }
+ .rows h3:hover{
+  color: blue;
+ }
+ .rows p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: rgb(133, 130, 130);
+  line-height: 19px;
+ }
+ .rows h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+ }
+.rows{
+  
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  margin-left: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.colomn{
+  display: flex;
+  margin-left: 60px;
+}
+.rows img{
+ width:350px ;
+}
+
+@media (max-width: 786px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+   width: 100%;
+  }
+  .features{
+    margin-left: -500px;
+  }
+  
+.navfeatures{
+  visibility:visible;
+  
+}
+  .navbar .navbar__menu {
+   visibility: hidden;
+  }
+
+  
+  .sidebar {
+    visibility: hidden;
+  }
+  #bars {
+    visibility: visible !important;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+
+
+  // #close{
+  //   visibility: visible; /* Show the times icon */
+  //   display: block; /* Show the times icon */
+  //   position: absolute;
+  //   top: 10px;
+  //   left: 10px;
+  //   z-index: 1000;
+  // }
+}
+
+
