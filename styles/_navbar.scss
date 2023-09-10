@@ -265,9 +265,15 @@ padding-top: 100px;
 .herodesc a{
   background-color:black ;
   padding-top: 20px;
-  padding: 20px 100px;
+  padding: 10px 60px;
+  border-radius: 30px;
   color: white;
   font-size: 20px;
+
+}
+.herodesc a:hover{
+  background:transparent ;
+  border: 1px solid wheat;
 }
 .products{
   background-color: #DBEAFF;
